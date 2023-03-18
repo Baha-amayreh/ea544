@@ -14,7 +14,7 @@ public abstract class Member {
     private String email2;//other email,could be null, gmail,msn,hotmail,yahoo,...
     private String phone; //not null, length=255
     private Address address;
-    private List<Memberships> memberships;
+    private List<Membership> memberships;
 
     //The last element in the stack will be active, while the other elements will be inactive.
     Stack<Badge> stackBadges = new Stack<Badge>();
@@ -26,7 +26,7 @@ public abstract class Member {
                   String lastName, LocalDate DOB,
                   String email1, String email2,
                   String phone, Address address,
-                  List<Memberships> memberships, Stack<Badge> stackBadges) {
+                  List<Membership> memberships, Stack<Badge> stackBadges) {
         this.memberId = memberId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -107,11 +107,11 @@ public abstract class Member {
         this.address = address;
     }
 
-    public List<Memberships> getMemberships() {
+    public List<Membership> getMemberships() {
         return memberships;
     }
 
-    public void setMemberships(List<Memberships> memberships) {
+    public void setMemberships(List<Membership> memberships) {
         this.memberships = memberships;
     }
 

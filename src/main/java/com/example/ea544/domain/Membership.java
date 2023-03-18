@@ -2,16 +2,16 @@ package com.example.ea544.domain;
 
 import java.time.LocalDate;
 
-public class Memberships {
+public class Membership {
     private long id;//Auto Generated
     private LocalDate startDate;//not null
     private LocalDate endDate;//not null
     private Plan plan;//memberships has one plan,
 
-    public Memberships() {
+    public Membership() {
     }
 
-    public Memberships(LocalDate startDate, LocalDate endDate, Plan plan) {
+    public Membership(LocalDate startDate, LocalDate endDate, Plan plan) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.plan = plan;
