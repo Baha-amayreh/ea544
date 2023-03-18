@@ -7,19 +7,17 @@ public class Memberships {
     private LocalDate startDate;
     private LocalDate endDate;
     private byte type;// 1-> unlimited.  2->limited.
-    private Location location;
-    private Member member;
+
+    private Plan plan;
 
     public Memberships() {
     }
 
-    public Memberships(LocalDate startDate, LocalDate endDate, byte type
-            , Location location, Member member) {
+    public Memberships(LocalDate startDate, LocalDate endDate, byte type, Plan plan) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.type = type;
-        this.location = location;
-        this.member = member;
+        this.plan = plan;
     }
 
     public LocalDate getStartDate() {
@@ -46,20 +44,12 @@ public class Memberships {
         this.type = type;
     }
 
-    public Location getLocation() {
-        return location;
+    public Plan getPlan() {
+        return plan;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    public Member getMember() {
-        return member;
-    }
-
-    public void setMember(Member member) {
-        this.member = member;
+    public void setPlan(Plan plan) {
+        this.plan = plan;
     }
 
     @Override
@@ -69,8 +59,7 @@ public class Memberships {
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", type=" + type +
-                ", location=" + location +
-                ", member=" + member +
+                ", plan=" + plan +
                 '}';
     }
 }
