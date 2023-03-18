@@ -1,11 +1,12 @@
 package com.example.ea544.domain;
 
+import java.time.LocalDate;
 import java.util.List;
 public abstract class Member {
     private long id;
     private String firstName;
     private String lastName;
-    private byte age;// 0-255 years , DOB:date of birth
+    private LocalDate DOB;//DOB:date of birth
     private String email;
     private String phone;
     private Address address;
@@ -39,12 +40,12 @@ public abstract class Member {
         this.lastName = lastName;
     }
 
-    public byte getDOB() {
-        return age;
+    public LocalDate getDOB() {
+        return DOB;
     }
 
-    public void setDOB(byte DOB) {
-        this.age = DOB;
+    public void setDOB(LocalDate DOB) {
+        this.DOB = DOB;
     }
 
     public String getEmail() {
@@ -93,7 +94,7 @@ public abstract class Member {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", age=" + age +
+                ", age=" + DOB +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address=" + address +
