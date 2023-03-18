@@ -2,16 +2,15 @@ package com.example.ea544.domain;
 
 import java.util.List;
 
-public class Rule {
+public class Role {
     private long id;//Auto Generated
     private String name;//not null, length=255
     //example of permission is Faculty and staff may have only 20, 30 or 50 meals/month.
     private List<String> permissions;
-
-    public Rule() {
+    public Role() {
     }
 
-    public Rule(String name, List<String> permissions) {
+    public Role(String name, List<String> permissions) {
         this.name = name;
         this.permissions = permissions;
     }

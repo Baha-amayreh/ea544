@@ -38,6 +38,10 @@ public abstract class Member {
         this.memberships = memberships;
         this.stackBadges = stackBadges;
     }
+    public void AddNewBadge(Badge badge){
+        this.stackBadges.peek().setActive(false);//deactivate the old one
+        this.stackBadges.push(badge);//push the new active one
+    }
 
     public long getId() {
         return id;

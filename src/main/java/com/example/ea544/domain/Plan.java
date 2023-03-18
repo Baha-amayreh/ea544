@@ -7,7 +7,7 @@ public class Plan {
     private String name;//not null, length=255
     private String description;//could be null,  length=4000
     private byte type;// 1-> unlimited.  2->limited.
-    private List<Rule> roles;//list of allowed roles
+    private List<Role> roles;//list of allowed roles
     public Plan(){
 
     }
