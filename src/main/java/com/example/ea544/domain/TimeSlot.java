@@ -5,25 +5,25 @@ import java.time.LocalTime;
 
 public class TimeSlot {
     private long id;
-    private LocalDate localDate;
+    private Days days;
     private LocalTime start;
     private LocalTime end;
 
     public TimeSlot() {
     }
 
-    public TimeSlot(LocalDate localDate, LocalTime start, LocalTime end) {
-        this.localDate = localDate;
+    public TimeSlot(Days days, LocalTime start, LocalTime end) {
+        this.days = days;
         this.start = start;
         this.end = end;
     }
 
-    public LocalDate getLocalDate() {
-        return localDate;
+    public Days getDays() {
+        return days;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setDays(Days days) {
+        this.days = days;
     }
 
     public LocalTime getStart() {
@@ -46,7 +46,7 @@ public class TimeSlot {
     public String toString() {
         return "TimeSlot{" +
                 "id=" + id +
-                ", localDate=" + localDate +
+                ", days=" + days +
                 ", start=" + start +
                 ", end=" + end +
                 '}';

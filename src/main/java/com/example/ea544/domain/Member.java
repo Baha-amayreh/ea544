@@ -4,14 +4,12 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Stack;
 
-public abstract class Member {
+public  class Member {
     private long id;//Auto Generated
-    private String memberId;//business rule ID, not null, length=255
     private String firstName;//not null, length=255
     private String lastName;//not null, length=255
     private LocalDate DOB;//DOB:date of birth,not null
-    private String email1;//university email, not null, length=255
-    private String email2;//other email,could be null, gmail,msn,hotmail,yahoo,...
+    private String email;//university email, not null, length=255
     private String phone; //not null, length=255
     private Address address;
     private List<Membership> memberships;
@@ -24,15 +22,12 @@ public abstract class Member {
 
     public Member(String memberId, String firstName,
                   String lastName, LocalDate DOB,
-                  String email1, String email2,
-                  String phone, Address address,
+                  String email1, String phone, Address address,
                   List<Membership> memberships, Stack<Badge> stackBadges) {
-        this.memberId = memberId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.DOB = DOB;
-        this.email1 = email1;
-        this.email2 = email2;
+        this.email = email1;
         this.phone = phone;
         this.address = address;
         this.memberships = memberships;
@@ -76,20 +71,13 @@ public abstract class Member {
     }
 
     public String getEmail1() {
-        return email1;
+        return email;
     }
 
     public void setEmail1(String email1) {
-        this.email1 = email1;
+        this.email = email1;
     }
 
-    public String getEmail2() {
-        return email2;
-    }
-
-    public void setEmail2(String email2) {
-        this.email2 = email2;
-    }
 
     public String getPhone() {
         return phone;
@@ -123,24 +111,14 @@ public abstract class Member {
         this.stackBadges = stackBadges;
     }
 
-    public String getMemberId() {
-        return memberId;
-    }
-
-    public void setMemberId(String memberId) {
-        this.memberId = memberId;
-    }
-
     @Override
     public String toString() {
         return "Member{" +
                 "id=" + id +
-                ", memberId='" + memberId + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", DOB=" + DOB +
-                ", email1='" + email1 + '\'' +
-                ", email2='" + email2 + '\'' +
+                ", email1='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address=" + address +
                 ", memberships=" + memberships +

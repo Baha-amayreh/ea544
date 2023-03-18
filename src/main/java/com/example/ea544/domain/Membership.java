@@ -6,15 +6,17 @@ public class Membership {
     private long id;//Auto Generated
     private LocalDate startDate;//not null
     private LocalDate endDate;//not null
-    private Plan plan;//memberships has one plan,
+    private Plan plan;//memberships has one plan
+    private MemberShipType type;// 1-> unlimited.  2->limited 3->Checker.
 
     public Membership() {
     }
 
-    public Membership(LocalDate startDate, LocalDate endDate, Plan plan) {
+    public Membership(LocalDate startDate, LocalDate endDate, Plan plan, MemberShipType type) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.plan = plan;
+        this.type = type;
     }
 
     public LocalDate getStartDate() {
@@ -39,6 +41,14 @@ public class Membership {
 
     public void setPlan(Plan plan) {
         this.plan = plan;
+    }
+
+    public MemberShipType getType() {
+        return type;
+    }
+
+    public void setType(MemberShipType type) {
+        this.type = type;
     }
 
     @Override
