@@ -18,7 +18,7 @@ public abstract class Member {
 
     //The last element in the stack will be active, while the other elements will be inactive.
     Stack<Badge> stackBadges = new Stack<Badge>();
-    List<Badge>badges;
+
     public Member() {
     }
 
