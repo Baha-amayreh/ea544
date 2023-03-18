@@ -1,11 +1,11 @@
 package com.example.ea544.domain;
 
 public class Address {
-    private long id;
-    private String street;
-    private String city;
-    private String state;
-    private String postalCode;
+    private long id;//Auto Generated
+    private String street;//not null, length=255
+    private String city;//not null, length=255
+    private String state;//not null, length=255
+    private String postalCode;//not null, length=5
 
     public Address() {
     }

@@ -1,12 +1,11 @@
 package com.example.ea544.domain;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Transaction {
-    private long id;
-    private LocalDateTime localDateTime;
-    private String operation;
+    private long id;//Auto Generated
+    private LocalDateTime localDateTime;//not null
+    private String operation;//description of the transaction
 
     public Transaction() {
     }

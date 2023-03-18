@@ -3,10 +3,10 @@ package com.example.ea544.domain;
 import java.util.List;
 
 public class Location {
-    private long id;
-    private String name;
+    private long id;//Auto Generated
+    private String name;//not null, length=255
     private String description;
-    private short capacity;
+    private short capacity;//the max value is 32767, should not less than zero, default value=30
     private LocationType type;
     private Address address;
     private List<TimeSlot> slots;

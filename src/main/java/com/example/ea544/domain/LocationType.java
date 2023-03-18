@@ -1,8 +1,8 @@
 package com.example.ea544.domain;
 
 public class LocationType {
-    private long id;
-    private String name;
+    private long id;//Auto Generated
+    private String name;//business rule ID, not null, length=255
 
     public LocationType() {
     }

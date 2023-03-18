@@ -1,28 +1,30 @@
 package com.example.ea544.domain;
 
 import java.time.LocalDate;
-import java.util.List;
+
 
 public class Badge {
-    private long id;
-    private String badgeID;
-    private boolean isActive;
-    private LocalDate issueDate;
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private Member member;
+    private long id;//PK
+    private String badgeID;//it is also like Barcode, it should be not null and unique!
+    private boolean isActive;//ture or false!
+    private LocalDate issueDate;//not null
+    private LocalDate startDate;//not null
+    private LocalDate endDate;//not null
+    private String description;//could be null
+    private String imagePath;//there is a default image path
 
     public Badge() {
     }
 
-    public Badge(String badgeID, boolean isActive, LocalDate issueDate,
-                 LocalDate startDate, LocalDate endDate, Member member) {
+    public Badge(String badgeID, boolean isActive, LocalDate issueDate, LocalDate startDate
+            , LocalDate endDate, String description, String imagePath) {
         this.badgeID = badgeID;
         this.isActive = isActive;
         this.issueDate = issueDate;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.member = member;
+        this.description = description;
+        this.imagePath = imagePath;
     }
 
     public String getBadgeID() {
@@ -65,24 +67,31 @@ public class Badge {
         this.endDate = endDate;
     }
 
-    public Member getMember() {
-        return member;
+    public String getDescription() {
+        return description;
     }
 
-    public void setMember(Member member) {
-        this.member = member;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     @Override
     public String toString() {
         return "Badge{" +
-                "id=" + id +
-                ", badgeID='" + badgeID + '\'' +
+                "badgeID='" + badgeID + '\'' +
                 ", isActive=" + isActive +
                 ", issueDate=" + issueDate +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
-                ", member=" + member +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
